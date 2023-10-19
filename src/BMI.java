@@ -14,13 +14,25 @@ public class BMI {
         double körpergröße = eingabe.nextDouble();
 
         // Verarbeitung
-        int jahre = 0 /* TODO: berechne...*/;
-        double bmi = 0 /* TODO: berechne...*/;
+        int jahre = 2023 - geburtsjahr;
+        double bmi = gewicht / (körpergröße * körpergröße);
 
         // Ausgabe
         System.out.println("Hallo " + name + ",");
         System.out.println("Ihr Alter beträgt " + jahre + " Jahre");
         System.out.println("Ihr BMI beträgt " + bmi);
         // ein paar andere Ausgaben ...
+        if (bmi < 18.5) {
+            System.out.println("Untergewicht");
+        }
+        else if (bmi < 25) {
+            System.out.println("Normalgewicht");
+        }
+        else if (bmi < 30) {
+            System.out.println("Übergewicht");
+        }
+        else {
+            System.out.println("ungesundes Übergewicht");
+        }
     }
 }
